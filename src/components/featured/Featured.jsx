@@ -2,9 +2,30 @@
 import { InfoOutlined, PlayArrow } from '@mui/icons-material';
 import './featured.scss';
 
-const Featured = () => {
+const Featured = ({ type }) => {
     return (
         <div className='featured'>
+            {type && (
+                <div className="category">
+                    <span>{type === 'movie' ? 'Movies' : 'Series'}</span>
+                    <select name="genre" id="genre">
+                        <option>Genre</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="crime">Crime</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="historical">Historical</option>
+                        <option value="horror">Horror</option>
+                        <option value="romance">Romance</option>
+                        <option value="sci-fi">Sci-fi</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="western">Western</option>
+                        <option value="animation">Animation</option>
+                        <option value="drama">Drama</option>
+                        <option value="documentary">Documentary</option>
+                    </select>
+                </div>
+            )}
             <img src="https://images.moviesanywhere.com/9e198d678b3e47f808f5a8f27f3e1e18/1b75cfe6-be1a-409f-b296-7f38e345fc9d.jpg?w=2560&r=16x9" alt="" width='100%' />
 
             <div className="info">
@@ -13,8 +34,8 @@ const Featured = () => {
                     alt=""
                 />
                 <span className="desc">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati enim hic 
-                    cupiditate porro molestiae earum quasi veniam sit sint perspiciatis nihil dolorem incidunt 
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati enim hic
+                    cupiditate porro molestiae earum quasi veniam sit sint perspiciatis nihil dolorem incidunt
                     libero, suscipit, delectus, quia officiis cum.
                 </span>
 
