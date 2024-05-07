@@ -1,9 +1,10 @@
 import './app.scss';
+import Home from './home/Home';
 
 const App = () => {
   return (
     <div className="app">
-      Netflix
+      <Home />
     </div>
   );
 }
