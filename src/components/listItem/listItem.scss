@@ -36,16 +36,47 @@
         }
     }
 
-    // .itemInfo {
-    //     .icons {}
+     .itemInfo {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
 
-    //     .itemInfoTop {
+         .icons {
+            display: flex;
+            margin-bottom: 10px;
 
-    //         .limit {}
-    //     }
+            .icon {
+                border: 2px solid #fff;
+                padding: 5px;
+                border-radius: 50%;
+                margin-right: 10px;
+                font-size: 16px;
+            }
+         }
 
-    //     .desc {}
+         .itemInfoTop {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: gray;
 
-    //     .genre {}
-    // }
+             .limit {
+                border: 1px solid gray;
+                padding: 1px 3px;
+                margin: 0 10px;
+             }
+         }
+
+         .desc {
+            font-size: 13px;
+            margin-bottom: 10px;
+         }
+
+         .genre {
+            font-size: 14px;
+            color: lightgray;
+         }
+     }
 }

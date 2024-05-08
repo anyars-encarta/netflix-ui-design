@@ -32,10 +32,10 @@ const ListItem = ({ index }) => {
 
           <div className="itemInfo">
             <div className="icons">
-              <PlayArrow />
-              <Add />
-              <ThumbUpOffAltOutlined />
-              <ThumbDownOutlined />
+              <PlayArrow className='icon' />
+              <Add className='icon' />
+              <ThumbUpOffAltOutlined className='icon' />
+              <ThumbDownOutlined className='icon' />
             </div>
 
             <div className="itemInfoTop">
