@@ -6,7 +6,7 @@
             rgba(0, 0, 0, 1) 100%),
         url('https://images2.alphacoders.com/445/445151.jpg');
     background-size: cover;
-    // position: relative;
+    position: relative;
 
     .top {
 
@@ -43,7 +43,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        // left: 0;
+        left: 0;
         display: flex;
         align-items: center;
         justify-content: center;
