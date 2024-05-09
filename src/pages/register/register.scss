@@ -33,6 +33,12 @@
                 font-size: 16px;
                 font-weight: 500;
                 cursor: pointer;
+                z-index: 10;
+
+                .link {
+                    text-decoration: none;
+                    color: inherit;
+                }
             }
         }
 
@@ -88,6 +94,11 @@
                 color: #fff;
                 font-size: 22px;
                 cursor: pointer;
+
+                .link {
+                    text-decoration: none;
+                    color: inherit;
+                }
             }
         }
     }

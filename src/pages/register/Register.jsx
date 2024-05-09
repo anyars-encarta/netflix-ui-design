@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './register.scss';
 
 const Register = () => {
@@ -25,7 +26,11 @@ const Register = () => {
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
                         alt=""
                     />
-                    <button className="loginButton">Sign In</button>
+                    <button className="loginButton">
+                        <Link to="/login" className='link'>
+                            Sign In
+                        </Link>
+                    </button>
                 </div>
             </div>
 
@@ -40,10 +45,20 @@ const Register = () => {
                         <button className="registerButton" onClick={handleStart}>Get started</button>
                     </div>
                 ) : (
-                <form className="input">
-                    <input type="password" placeholder='Password' ref={passwordRef} />
-                    <button className="registerButton" onClick={handleFinish}>Start</button>
-                </form>
+                    <form className="input">
+                        <input type="password" placeholder='Password' ref={passwordRef} onChange={(e) => setPassword(e.target.value)} />
+                        <button
+                            className="registerButton"
+                            onClick={handleFinish}>
+                            {password === '' ? (
+                                'Start'
+                            ) : (
+                                <Link to="/home" className='link'>
+                                    Start
+                                </Link>
+                            )}
+                        </button>
+                    </form>
                 )}
 
             </div>

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './app.scss';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
@@ -6,9 +7,16 @@ import Watch from './pages/watch/Watch';
 
 const App = () => {
   return (
-    <div className="app">
-      <Register />
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path='/' element={<Register />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/watch' element={<Watch />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
