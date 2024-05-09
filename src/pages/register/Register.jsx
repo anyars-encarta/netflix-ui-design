@@ -46,8 +46,18 @@ const Register = () => {
                     </div>
                 ) : (
                     <form className="input">
-                        <input type="password" placeholder='Password' ref={passwordRef} />
-                        <button className="registerButton" onClick={handleFinish}>Start</button>
+                        <input type="password" placeholder='Password' ref={passwordRef} onChange={(e) => setPassword(e.target.value)} />
+                        <button
+                            className="registerButton"
+                            onClick={handleFinish}>
+                            {password === '' ? (
+                                'Start'
+                            ) : (
+                                <Link to="/home" className='link'>
+                                    Start
+                                </Link>
+                            )}
+                        </button>
                     </form>
                 )}
 

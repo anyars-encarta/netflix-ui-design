@@ -94,6 +94,11 @@
                 color: #fff;
                 font-size: 22px;
                 cursor: pointer;
+
+                .link {
+                    text-decoration: none;
+                    color: inherit;
+                }
             }
         }
     }
