@@ -6,10 +6,16 @@ import {
 } from '@mui/icons-material';
 import './listItem.scss';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ListItem = ({ index }) => {
   const [hovered, setHovered] = useState(false);
   const trailer = "https://vimeo.com/456293878";
+  const navigate = useNavigate();
+
+  const handleWatch = () => {
+    navigate('/watch');
+  };
 
   return (
     <div
@@ -17,6 +23,7 @@ const ListItem = ({ index }) => {
       style={{ left: hovered && index * 225 - 50 + index * 2.5 }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={handleWatch}
     >
       <img
         src="https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU7D36jL6KiLG1xI8Xg_cZK-hYQj1L8yRxbQuB0rcLCnAk8AhEK5EM83QI71bRHUm0qOYxonD88gaThgDaPu7NuUfRg.jpg?r=4ee"
