@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import './login.scss';
 
 const Login = () => {
-  return (
-    <div className='login'>
-        <div className="top">
+    return (
+        <div className='login'>
+            <div className="top">
                 <div className="wrapper">
                     <img
                         className='logo'
@@ -18,15 +19,22 @@ const Login = () => {
                         <input type="email" placeholder='Email or Phone number' />
                         <input type="password" placeholder='Password' />
                         <button className="loginButton">Sign In</button>
-                        <span>New to Netflix? <b>Sign up now.</b></span>
+                        <span>
+                            New to Netflix?
+                            <b>
+                                <Link to="/" className='link'>
+                                    Sign up now.
+                                </Link>
+                            </b>
+                        </span>
                         <small>
                             This page is protected by Google reCAPTCHA to ensure you are not a bot. <b>Learn more</b>.
                         </small>
                     </form>
                 </div>
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Login
