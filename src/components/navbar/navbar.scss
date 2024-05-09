@@ -75,14 +75,13 @@
                         position: absolute;
                         background-color: var(--main-color);
                         border-radius: 5px;
-
-                        .link {
-                            text-decoration: none;
-                            color: inherit;
-                        }
                     }
                 }
             }
         }
+    }
+    .link {
+        text-decoration: none;
+        color: inherit;
     }
 }
